@@ -1,1 +1,16 @@
+<input id="guess" placeholder="輸入國家">
+<button onclick="check()">確認</button>
+<p id="result"></p>
 
+<script>
+const countries = ["Taiwan", "Japan", "France", "Brazil", "Canada"];
+
+function check() {
+  const input = document.getElementById("guess").value;
+  if (countries.includes(input)) {
+    document.getElementById("result").innerText = "答對了！";
+  } else {
+    document.getElementById("result").innerText = "再試一次";
+  }
+}
+</script>
